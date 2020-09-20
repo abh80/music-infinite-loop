@@ -30,7 +30,6 @@ function getStream() {
   return arr;
 }
 
-new concat(getStream()).pipe(fs.createWriteStream("./kek.mp3"));
 app.get("/", (req, res) => {
   let stream = new concat(getStream());
   stream.pipe(res);
@@ -38,7 +37,7 @@ app.get("/", (req, res) => {
 
 app.get("/infinite", (req, res) => {
   let connector = 0;
-  fs.createReadStream("./jej.mp3").pipe(res);
+  new concat(getStream()).pipe(res);
   req.once("end", () => (connector += 1));
   req.once("close", () => (connector += 1));
   let inteval = setInterval(() => {
