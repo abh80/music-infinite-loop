@@ -1,0 +1,12 @@
+{
+  "name": "weeknd-loop",
+  "version": "1.0.0",
+  "description": "A simple module made to loop through weeknd's tracks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abh80",
+  "license": "ISC",
+  "dependencies": {}
+}
